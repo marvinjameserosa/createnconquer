@@ -44,6 +44,7 @@ import {
   TrendingUp,
   Settings,
   LogOut,
+  LucideIcon
 } from "lucide-react";
 import { dashboardData, navigationData } from "@/lib/data";
 import { UserProfileModal } from "@/components/modals/user-profile-modal";
@@ -57,7 +58,7 @@ export function AppSidebar({ activeTab }: AppSidebarProps) {
   const { user } = dashboardData;
   const xpProgress = (user.xp / user.nextLevelXp) * 100;
 
-  const iconMap = {
+   const iconMap: Record<string, LucideIcon> = {
     BarChart3,
     Building2,
     CheckSquare,
