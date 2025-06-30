@@ -11,8 +11,21 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ProjectDetailsModal } from "@/components/modals/project-details-modal";
 
+interface Project {
+  name: string;
+  status: 'On Track' | 'Delayed' | 'Ahead';
+  priority: 'high' | 'medium' | 'low';
+  location: string;
+  phase: string;
+  health: 'excellent' | 'good' | 'warning' | 'critical';
+  progress: number;
+  budget: number;
+  team: string | number;
+  deadline: string | Date;
+}
+
 interface ProjectHealthCardProps {
-  project: any;
+  project: Project;
 }
 
 export function ProjectHealthCard({ project }: ProjectHealthCardProps) {
