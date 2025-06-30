@@ -31,29 +31,38 @@ interface ProjectHealthCardProps {
 }
 
 export function ProjectHealthCard({ project }: ProjectHealthCardProps) {
-  const statusColors = {
+  const statusColors: Record<string, string> = {
     "On Track": "bg-green-100 text-green-800 border-green-200",
     Delayed: "bg-red-100 text-red-800 border-red-200",
     Ahead: "bg-blue-100 text-blue-800 border-blue-200",
   };
 
-  const healthColors = {
+  const healthColors: Record<string, string> = {
     excellent: "text-green-600",
     good: "text-blue-600",
     warning: "text-yellow-600",
     critical: "text-red-600",
   };
 
-  const priorityColors = {
+  const priorityColors: Record<string, string> = {
     high: "border-l-red-500",
     medium: "border-l-yellow-500",
     low: "border-l-green-500",
   };
 
+  const getPriorityColor = (priority: string): string => 
+    priorityColors[priority] || "border-l-gray-500";
+  
+  const getStatusColor = (status: string): string => 
+    statusColors[status] || "bg-gray-100 text-gray-800 border-gray-200";
+  
+  const getHealthColor = (health: string): string => 
+    healthColors[health] || "text-gray-600";
+
   return (
     <Card
       className={`border-l-4 ${
-        priorityColors[project.priority]
+        getPriorityColor(project.priority)
       } hover:shadow-lg transition-all duration-300`}
     >
       <CardHeader className="pb-3">
@@ -62,7 +71,7 @@ export function ProjectHealthCard({ project }: ProjectHealthCardProps) {
             {project.name}
           </CardTitle>
           <Badge
-            className={`${statusColors[project.status]} border font-medium`}
+            className={`${getStatusColor(project.status)} border font-medium`}
           >
             {project.status}
           </Badge>
@@ -72,7 +81,7 @@ export function ProjectHealthCard({ project }: ProjectHealthCardProps) {
             {project.location} • {project.phase}
           </span>
           <span
-            className={`text-sm font-medium ${healthColors[project.health]}`}
+            className={`text-sm font-medium ${getHealthColor(project.health)}`}
           >
             {project.health.charAt(0).toUpperCase() + project.health.slice(1)}{" "}
             Health
