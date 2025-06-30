@@ -12,14 +12,16 @@ import { Progress } from "@/components/ui/progress";
 import { ProjectDetailsModal } from "@/components/modals/project-details-modal";
 
 interface Project {
+  id: string | number;
   name: string;
-  status: 'On Track' | 'Delayed' | 'Ahead';
-  priority: 'high' | 'medium' | 'low';
+  status: string; 
+  priority: string; 
   location: string;
   phase: string;
-  health: 'excellent' | 'good' | 'warning' | 'critical';
+  health: string;  
   progress: number;
   budget: number;
+  spent: number;
   team: string | number;
   deadline: string | Date;
 }
