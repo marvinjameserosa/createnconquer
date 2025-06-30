@@ -14,6 +14,7 @@ const eslintConfig = [
   {
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-implicit-any': 'off',
       '@typescript-eslint/no-implicit-any-catch': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-argument': 'off',

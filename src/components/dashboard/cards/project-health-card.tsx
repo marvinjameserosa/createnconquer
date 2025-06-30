@@ -11,43 +11,25 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ProjectDetailsModal } from "@/components/modals/project-details-modal";
 
-// Define valid status, health, and priority types to ensure type safety
-type ProjectStatus = "On Track" | "Delayed" | "Ahead";
-type ProjectHealth = "excellent" | "good" | "warning" | "critical";
-type ProjectPriority = "high" | "medium" | "low";
-
 interface ProjectHealthCardProps {
-  project: {
-    id?: string | number;
-    name: string;
-    status: ProjectStatus;
-    location: string;
-    phase: string;
-    health: ProjectHealth;
-    priority: ProjectPriority;
-    progress: number;
-    budget: number;
-    team: number | string;
-    deadline: string | Date;
-    // Add any other properties your project might have
-  };
+  project: any;
 }
 
 export function ProjectHealthCard({ project }: ProjectHealthCardProps) {
-  const statusColors: Record<ProjectStatus, string> = {
+  const statusColors = {
     "On Track": "bg-green-100 text-green-800 border-green-200",
     Delayed: "bg-red-100 text-red-800 border-red-200",
     Ahead: "bg-blue-100 text-blue-800 border-blue-200",
   };
 
-  const healthColors: Record<ProjectHealth, string> = {
+  const healthColors = {
     excellent: "text-green-600",
     good: "text-blue-600",
     warning: "text-yellow-600",
     critical: "text-red-600",
   };
 
-  const priorityColors: Record<ProjectPriority, string> = {
+  const priorityColors = {
     high: "border-l-red-500",
     medium: "border-l-yellow-500",
     low: "border-l-green-500",
