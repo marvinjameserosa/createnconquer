@@ -161,7 +161,7 @@ export function FeaturesSection() {
                 transition={{ duration: 0.8, delay: 1 }}
                 className="text-orange-100 text-lg mb-8 leading-relaxed"
               >
-                Our AI-powered platform doesn't just manage projects—it
+                Our AI-powered platform doesn&apos;t just manage projects—it
                 transforms how teams collaborate, compete, and succeed together.
               </motion.p>
               <motion.div

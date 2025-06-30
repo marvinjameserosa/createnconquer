@@ -174,7 +174,7 @@ export function GetStartedModal() {
         <DialogHeader>
           <DialogTitle>Get Started with SiteSight</DialogTitle>
           <DialogDescription>
-            Let's set up your construction management platform
+            Let&apos;s set up your construction management platform
           </DialogDescription>
         </DialogHeader>
 
@@ -433,7 +433,7 @@ export function DemoModal() {
               </div>
             </div>
             <div className="space-y-3">
-              <h4 className="font-semibold">What you'll see:</h4>
+              <h4 className="font-semibold">What you&apos;ll see:</h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
@@ -608,7 +608,7 @@ export function StartBuildingModal() {
         <DialogHeader>
           <DialogTitle>Start Your Construction Revolution</DialogTitle>
           <DialogDescription>
-            Choose how you'd like to begin with SiteSight
+            Choose how you&apos;d like to begin with SiteSight
           </DialogDescription>
         </DialogHeader>
         <ScrollArea className="h-[400px] pr-4">

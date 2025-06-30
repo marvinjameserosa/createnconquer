@@ -123,7 +123,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8"
         >
-          From blueprint to building handover, we've reimagined the entire
+          From blueprint to building handover, we&apos;ve reimagined the entire
           process. Experience immersive 3D visualization and radical
           transparency that keeps every stakeholder connected in real-time.
         </motion.p>

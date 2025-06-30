@@ -35,7 +35,7 @@ export function TestimonialsSection() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             See how construction teams worldwide are transforming their projects
-            with SiteSight's innovative platform.
+            with SiteSight&apos;s innovative platform.
           </p>
         </motion.div>
 
